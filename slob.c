@@ -203,14 +203,13 @@ static void pool_init(unsigned char pool_id, unsigned char block_size, unsigned 
 
 int main(void) {
 	int *i;
-	pool_init(0, BLOCK_SIZE0, pool0, sizeof(pool0));
 	
-	i = (int*)my_malloc(4);
+	i = (int*)malloc(4);
 	if(i)
 		printf("success\n");
 	else
 		printf("Error\n");
-	my_free(i);
+	free(i);
 		
 	return 0;
 }
